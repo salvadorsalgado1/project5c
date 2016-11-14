@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package project5c;
+
+/**
+ *
+ * Programmer:  Salvador Salgado
+ */
+public class StackTest {
+    
+    
+    public static void main(String[] args) {
+     
+      StackReferenceBased s1 = new StackReferenceBased();
+      
+   s1.push(2);
+   s1.push(3);
+   s1.pop();
+   s1.push(323);
+   s1.pop();
+   s1.popAll();
+   s1.push(5);
+   
+System.out.println("Is it empty? " + s1.isEmpty());
+   System.out.println("Top of the stack: " + s1.peek());
+   
+    }
+    
+}
