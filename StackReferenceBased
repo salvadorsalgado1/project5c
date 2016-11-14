@@ -1,0 +1,62 @@
+// Programmer : Salvador Salgado
+
+
+package project5c;
+
+public class StackReferenceBased  {
+  private Node head;
+
+  public StackReferenceBased() {
+    head = null;
+  }  
+
+  public boolean isEmpty() {
+    return head ==  null;
+  }  
+
+  public void push(int nextNode) {
+    head = new Node(nextNode, head);
+  }  
+  
+
+  public Object pop() throws StackException {
+    if (!isEmpty()) {
+      Node temp = head ;
+      head = head.next;
+      return head.size;
+    }
+    else {
+      throw new StackException("StackException on " +
+                               "pop: stack empty");
+    }  
+  }  
+
+  public void popAll() {
+    head = null;
+  }  
+
+  public int peek() throws StackException {
+    if (!isEmpty()) {
+      return head.getSize();
+    }
+    else {
+      throw new StackException("StackException on " +
+                               "peek: stack empty");
+    }  
+  }  
+  
+  public class StackException extends RuntimeException 
+   {
+
+  public StackException(String s) 
+  {
+    super(s);
+  }  
+}  
+  
+}  // end StackReferenceBased
+
+
+
+
+
