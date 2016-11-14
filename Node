@@ -1,0 +1,38 @@
+package project5c;
+
+/**
+ *
+ * Programmer:  Salvador Salgado
+ */
+class Node {
+ 
+int size;
+Node next;
+public Node()
+   {      
+       size = 0;
+      next = null;   
+   }
+   
+   public Node(int newValue)
+   {      
+       size = newValue;       
+   }   
+   public Node(int newValue, Node nextNode)
+   {
+       size = newValue;
+       next = nextNode;    
+   }
+      
+   public int getSize()
+   {       
+       return size;      
+   }
+   
+   public Node getHead()
+   {            
+      return next;       
+   }
+  
+    
+}
